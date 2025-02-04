@@ -62,7 +62,24 @@
         <script>
             let flowerCounter = 0;
             let messageCounter = 0;
+            const messageInstant = document.createElement("div");
+            messageInstant.classList.add("messageInstant");
+            messageInstant.textContent = "🌸Press screen for flowers🌸";
+            messageInstant.style.top = "50%";
+            messageInstant.style.left = "50%";
+            messageInstant.style.transform = "translate(-50%, -50%)";
+            messageInstant.style.backgroundColor = "rgba(240, 122, 218, 0.7)";
+            messageInstant.style.padding = "20px";
+            messageInstant.style.borderRadius = "10px";
+            messageInstant.style.position = "fixed";
+            messageInstant.style.color = "white";
+            messageInstant.style.fontWeight = "bold";
+            messageInstant.style.fontSize = "20px";
+            messageInstant.style.textAlign = "center";
+            document.body.appendChild(messageInstant);
 
+            setTimeout(() => messageInstant.remove(), 3000);
+            
             document.addEventListener("click", function(event) {
                 const flower = document.createElement("div");
                 flower.classList.add("flower");
@@ -149,7 +166,7 @@
 
                 flowerCounter++;
 
-                if(flowerCounter === 30){
+                if(flowerCounter === 12){
                     let messageText = "";
 
                     if(messageCounter === 0){
