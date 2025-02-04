@@ -61,6 +61,7 @@
     <body>
         <script>
             let flowerCounter = 0;
+            let messageCounter = 0;
 
             document.addEventListener("click", function(event) {
                 const flower = document.createElement("div");
@@ -148,10 +149,25 @@
 
                 flowerCounter++;
 
-                if(flowerCounter === 10){
+                if(flowerCounter === 30){
+                    let messageText = "";
+
+                    if(messageCounter === 0){
+                        messageText = "Will you be my Valentine, CC?";
+                    }else if(messageCounter === 1){
+                        messageText = "Waiting for a 'Yes' button?";
+                    }else if(messageCounter === 2){
+                        messageText = "you staying here means 'Yes'";
+                    }else if(messageCounter === 3){
+                        messageText = "(I know you are smiling right now)";
+                    }else if(messageCounter === 4){
+                        messageText = "I love you <3";
+                    }else if(messageCounter === 5){
+                        messageText = "You are my Valentine now :3";
+                    }
                     const message = document.createElement("div");
                     message.classList.add("message");
-                    message.textContent = "Will you be my Valentine, CC?";
+                    message.textContent = messageText;
                     message.style.top = "50%";
                     message.style.left = "50%";
                     message.style.transform = "translate(-50%, -50%)";
@@ -168,6 +184,7 @@
                     setTimeout(() => message.remove(), 10000);
 
                     flowerCounter = 0;
+                    messageCounter = (messageCounter + 1) % 6;
                 }
 
             });
