@@ -9,4 +9,4 @@ The idea was to practice my JavaScript, HTML and CSS knowledge in a fun way ;))
 - After creating 30 flowers, special messages appear sequentially.
 
 ## Try it out:
-You can try out the Flower Picker demo by clicking the link [Flower Picker Demo](https://klaraaorban.github.io/flower_picker/)
+You can try out the Flower Picker demo by clicking the link [Flower Picker Demo](https://klaraaorban.github.io/index.html)
